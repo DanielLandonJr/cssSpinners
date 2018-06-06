@@ -1,0 +1,65 @@
+/* spinner 1 */
+/* full circle with spinner going around */
+.spinner-1:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  height: 80px;
+  width: 80px;
+  /* readjust margins so that spinner is centered */
+  margin-top: -40px;
+  margin-left: -40px;
+  border-radius: 50%;
+  /* color of part that goes around the spinner */
+  border: 4px solid #e1bee7;
+  /* color of spinner ring */
+  border-top-color: #311b92;
+  animation: spinner 0.7s linear infinite;
+}
+
+/* spinner 2 */
+/* partial circle with a slow jerky motion */
+.spinner-2:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin-top: -40px;
+  margin-left: -40px;
+  border-radius: 50%;
+  /* transparent, we dont want to see the border */
+  border: 2px solid transparent;
+  /* color of spinner ring */
+  border-top-color: #311b92;
+  border-bottom-color: #e1bee7;
+  animation: spinner 0.7s ease infinite;
+}
+
+/* spinner 3 */
+/* no spinner circle...just the part that goes around the spinner */
+.spinner-3:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  height: 80px;
+  width: 80px;
+  margin-top: -40px;
+  margin-left: -40px;
+  border-radius: 50%;
+  border-top: 2px solid #311b92;
+  border-right: 2px solid transparent;
+  animation: spinner 0.7s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
